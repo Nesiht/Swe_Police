@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dev</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id="map"></div>
+  <button id="getPosts" type="button" class="btn btn-outline-primary">GET API DATA</button> <!-- CTA för javascriptet -->
+  <button id="getCoordinates" type="button" class="btn btn-outline-primary">GET CORD DATA</button> <!-- CTA för javascriptet -->
+
+    <div id="output" class="container"></div>  <!-- Ytan att placera datan från api -->
+    <div id="secondOutput" class="container"></div>  <!-- Ytan att placera datan från api -->
+    <div id="fetch" class="container"></div> <!-- Ytan att placera data från fetch -->
+
+  <script src="script.js"></script>
+  <script>
+     var map;
+     function initMap() {
+       map = new google.maps.Map(document.getElementById('map'), {
+         center: {lat: 59.3251172, lng: 18.0710935},
+         zoom: 8
+       });
+     }
+   </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUlmR4MGa0LiMMRDWSMpTYvhKPZchSMLI&callback=initMap"
+   async defer></script>
+</body>
+</html>
