@@ -10,24 +10,24 @@
 
 </head>
 <body>
-  <div id="map"></div>
-  <button id="getPosts" type="button" class="btn btn-outline-primary">GET API DATA</button> <!-- CTA för javascriptet -->
-  <button id="getCoordinates" type="button" class="btn btn-outline-primary">GET CORD DATA</button> <!-- CTA för javascriptet -->
 
-    <div id="output" class="container"></div>  <!-- Ytan att placera datan från api -->
-    <div id="secondOutput" class="container"></div>  <!-- Ytan att placera datan från api -->
-    <div id="fetch" class="container"></div> <!-- Ytan att placera data från fetch -->
+
+  <div id="map"></div>
+
+
+  <button id="getPosts" type="button" class="btn btn-outline-primary">SHOW ALL API DATA</button> <!-- CTA for javascriptet -->
+  <button id="getCoordinates" type="button" class="btn btn-outline-primary">SHOW 9 LATEST API DATA</button> <!-- CTA for javascriptet -->
+
+
+<!-- Divs for showing API response -->
+    <div class="container">
+        <div class="row" id="output">
+        </div>
+    </div>
+
+
 
   <script src="script.js"></script>
-  <script>
-     var map;
-     function initMap() {
-       map = new google.maps.Map(document.getElementById('map'), {
-         center: {lat: 59.3251172, lng: 18.0710935},
-         zoom: 8
-       });
-     }
-   </script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUlmR4MGa0LiMMRDWSMpTYvhKPZchSMLI&callback=initMap"
    async defer></script>
 </body>
